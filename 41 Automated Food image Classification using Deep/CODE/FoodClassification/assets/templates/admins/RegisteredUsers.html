@@ -1,0 +1,57 @@
+{%extends 'admins/adminbase.html'%}
+{%load static%}
+{%block contents%}
+
+<div class="about">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="title">
+                    <i><img src="{%static 'images/title.png'%}" alt="#"/></i>
+                    <h2>View Register users</h2>
+                    <span>
+                         <table class="table table-bordered bg-light text-dark">
+ <thead style="color:brown;">
+      <tr>
+        <th>S.No</th>
+        <th>Name</th>
+        <th>Login ID</th>
+        <th>Mobile</th>
+        <th>Email</th>
+        <th>Locality</th>
+        <th>Status</th>
+        <th>Activate</th>
+      </tr>
+    </thead>
+    <tbody>
+    {% for i in data %}
+                                            <tr style="color: Black">
+                                                <td>{{forloop.counter}}</td>
+                                                <td>{{i.name}}</td>
+                                                <td>{{i.loginid}}</td>
+                                                <td>{{i.mobile}}</td>
+                                                <td>{{i.email}}</td>
+                                                <td>{{i.locality}}</td>
+                                                <td>{{i.status}}</td>
+
+                                                {% if i.status == 'waiting' %}
+                                                <td><a class="btn-link" href="/AdminActivaUsers/?uid={{ i.id }}"
+                                                       style="color:DARKBLUE">Activate</a></td>
+                                                {% else %}
+                                                <td> Activated</td>
+                                                {% endif %}
+                                            </tr>
+                                            {% endfor %}
+
+    </tbody>
+                        </table>
+                   </span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<!-- end about -->
+
+{%endblock%}

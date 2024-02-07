@@ -1,0 +1,71 @@
+{%extends 'admins/adminbase.html'%}
+{%load static%}
+{%block contents%}
+<div class="slider_section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="full">
+                    <div id="main_slider" class="carousel vert slide" data-ride="carousel" data-interval="5000">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <div class="row">
+                                    <div class="col-md-5">
+                                        <div class="slider_cont">
+                                            <h3>Convolution Neural Network has basically three layers</h3>
+                                            <p>convolution layers, pooling layers and fully connected layers.
+                                                Convolution layer assigns learnable weights and biases to input
+                                                image. Pooling layer down-samples the input data by summarizing the
+                                                features thus reducing trainable parameters. At the end fully
+                                                connected layer is present having full connections to all neurons.
+                                                Softmax activation function calculated the probability of the image
+                                                belonging to a particular class</p>
+
+                                        </div>
+                                    </div>
+                                    <div class="col-md-7">
+                                        <div class="slider_image full text_align_center">
+                                            <img class="img-responsive" src="{%static 'images/burger_slide.png'%}"
+                                                 alt="#"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="row">
+                                    <div class="col-md-5">
+                                        <div class="slider_cont">
+                                            <h3>Data Augmentation</h3>
+                                            <p>Data augmentation acts as a egularizer that helps prevent overfitting
+                                                in neural networks and improves imbalance class problems [9].
+                                                Mostly, techniques such as cropping, resizing, rotating, translating
+                                                and flipping etc., are applied to the original images. Here,
+                                                rotation range and random reflection techniques have been used,
+                                                which are briefly described below</p>
+
+                                        </div>
+                                    </div>
+                                    <div class="col-md-7 full text_align_center">
+                                        <div class="slider_image">
+                                            <img class="img-responsive" src="{%static 'images/burger_slide.png'%}"
+                                                 alt="#"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <a class="carousel-control-prev" href="#main_slider" role="button" data-slide="prev">
+                            <i class="fa fa-angle-up"></i>
+                        </a>
+                        <a class="carousel-control-next" href="#main_slider" role="button" data-slide="next">
+                            <i class="fa fa-angle-down"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{%endblock%}

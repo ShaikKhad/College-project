@@ -1,0 +1,23 @@
+{%extends 'users/userbase.html'%}
+{%load static%}
+{%block contents%}
+<div class="about">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="title">
+                    <i><img src="{%static 'images/title.png'%}" alt="#"/></i>
+                    <h2>Loss Graph</h2>
+                    <span>
+                        <img src="{%static 'model/loss.png'%}" alt="#"/>
+                   </span>
+                    <span>
+                        <img src="{%static 'model/imagessize.png'%}" alt="#"/>
+                   </span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+{%endblock%}

@@ -1,0 +1,36 @@
+{%extends 'users/userbase.html'%}
+{%load static%}
+{%block contents%}
+<div class="about">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="title">
+                    <i><img src="{%static 'images/title.png'%}" alt="#"/></i>
+                    <h2>Trained Classess</h2>
+                    <center>
+                   <table border="1px">
+                       <tr>
+                           <th>S.No</th>
+                           <th>Prediction Classess</th>
+                       </tr>
+
+                            {%for x in labels%}
+                        <tr>
+                        <td>{{forloop.counter}}</td>
+                        <td>{{x}}</td>
+                            </tr>
+                        {%endfor%}
+
+                   </table>
+
+                    </ul>
+                   </center>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+{%endblock%}
